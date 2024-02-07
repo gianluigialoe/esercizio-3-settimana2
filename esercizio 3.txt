@@ -1,0 +1,58 @@
+1--SELECT COUNT(*)
+  FROM [esercizio3].[dbo].[Orders]
+
+
+2--SELECT COUNT(*)
+
+  FROM [esercizio3].[dbo].[Customers]
+
+3--SELECT COUNT (*) AS TOTAL
+      
+  FROM [esercizio3].[dbo].[Customers]
+  WHERE City='London';
+
+
+4-SELECT AVG(Freight) as total
+  FROM [esercizio3].[dbo].[Orders]
+
+5--SELECT AVG(Freight) AS AverageTransportCost
+FROM [esercizio3].[dbo].[Orders]
+WHERE CustomerID = 'BOTTM';
+
+6--SELECT AVG(Freight) AS AverageTransportCost
+FROM [esercizio3].[dbo].[Orders]
+WHERE CustomerID = 'BOTTM';
+
+
+7--SELECT city, COUNT(*) AS TotalCustomers
+FROM [esercizio3].[dbo].[Customers]
+GROUP BY city;
+
+
+
+8--SELECT OrderID, SUM(UnitPrice * Quantity) AS TotalOrderAmount
+
+  FROM [esercizio3].[dbo].[Order Details]
+  GROUP BY OrderID;
+
+
+
+9--SELECT SUM(UnitPrice * Quantity) AS TotalOrderAmount
+FROM [esercizio3].[dbo].[OrderDetails]
+WHERE OrderID = 10248;
+
+
+10--SELECT CategoryID, COUNT(*) AS NumberOfProducts
+FROM [esercizio3].[dbo].[Products]
+GROUP BY CategoryID;
+
+
+11--SELECT ShipCountry, COUNT(*) AS TotalOrders
+FROM [esercizio3].[dbo].[Orders]
+GROUP BY ShipCountry
+
+
+
+12--SELECT ShipCountry, AVG(Freight) AS AverageShippingCost
+FROM [esercizio3].[dbo].[Orders]
+GROUP BY ShipCountry;
